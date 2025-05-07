@@ -1,1 +1,34 @@
-
+{
+  "templates": [
+    {
+      "name": "Housework",
+      "icon_name": "housework",
+      "icon_color": "#FF5733",
+      "category": {
+        "name": "Health"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "Num",
+          "name": "Duration",
+          "required": true,
+          "enabled": false,
+          "unit": "Hour"
+        },
+        {
+          "type": "Text",
+          "name": "Location",
+          "required": false,
+          "enabled": true
+        },
+        {
+          "type": "Num",
+          "name": "Clean Num",
+          "required": false,
+          "enabled": false
+        }
+      ]
+    }
+  ]
+}
