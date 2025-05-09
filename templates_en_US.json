@@ -1,8 +1,8 @@
 {
   "templates": [
     {
-      "name": "Housework",
-      "icon_name": "housework",
+      "name": "头痛",
+      "icon_name": "header_pain",
       "icon_color": "#FF5733",
       "category": {
         "name": "Health"
@@ -11,20 +11,513 @@
       "properties": [
         {
           "type": "Num",
-          "name": "Duration",
+          "name": "持续时间",
           "required": true,
-          "enabled": false,
-          "unit": "Hour"
+          "enabled": true,
+          "unit": "分钟"
+        },
+        {
+          "type": "MOptions",
+          "name": "疼痛位置",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "全头痛", "color": "#FF5733", "sort": 10},
+            {"name": "偏头痛", "color": "#FF5733", "sort": 11},
+            {"name": "前头痛", "color": "#FF5733", "sort": 12},
+            {"name": "眼部", "color": "#FF5733", "sort": 13},
+            {"name": "颞部", "color": "#FF5733", "sort": 14},
+            {"name": "枕颈部", "color": "#FF5733", "sort": 15}
+          ]
+        },
+        {
+          "type": "SOptions",
+          "name": "疼痛程度",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "轻微", "color": "#FFBD33", "sort": 10},
+            {"name": "中等", "color": "#FF8C33", "sort": 11},
+            {"name": "严重", "color": "#FF5733", "sort": 12},
+            {"name": "剧烈", "color": "#E60000", "sort": 13}
+          ]
+        },
+        {
+          "type": "MOptions",
+          "name": "伴随症状",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "恶心", "color": "#A2FF33", "sort": 10},
+            {"name": "呕吐", "color": "#A2FF33", "sort": 11},
+            {"name": "畏光", "color": "#A2FF33", "sort": 12},
+            {"name": "头晕", "color": "#A2FF33", "sort": 13}
+          ]
         },
         {
           "type": "Text",
-          "name": "Location",
+          "name": "使用药物",
           "required": false,
           "enabled": true
         },
         {
+          "type": "Text",
+          "name": "备注",
+          "required": false,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "name": "睡眠",
+      "icon_name": "sleep",
+      "icon_color": "#3375FF",
+      "category": {
+        "name": "Health"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "TimeRange",
+          "name": "睡眠时间",
+          "required": true,
+          "enabled": true
+        },
+        {
           "type": "Num",
-          "name": "Clean Num",
+          "name": "睡眠时长",
+          "required": false,
+          "enabled": true,
+          "unit": "小时"
+        },
+        {
+          "type": "SOptions",
+          "name": "睡眠质量",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "优", "color": "#33FF57", "sort": 10},
+            {"name": "良", "color": "#A2FF33", "sort": 11},
+            {"name": "中", "color": "#FFFF33", "sort": 12},
+            {"name": "差", "color": "#FFBD33", "sort": 13},
+            {"name": "极差", "color": "#FF5733", "sort": 14}
+          ]
+        },
+        {
+          "type": "MOptions",
+          "name": "影响因素",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "压力", "color": "#FF5733", "sort": 10},
+            {"name": "噪音", "color": "#FFBD33", "sort": 11},
+            {"name": "咖啡因", "color": "#A0522D", "sort": 12},
+            {"name": "饱腹", "color": "#FF8C33", "sort": 13},
+            {"name": "屏幕时间", "color": "#3375FF", "sort": 14}
+          ]
+        },
+        {
+          "type": "Boolean",
+          "name": "做梦",
+          "required": false,
+          "enabled": true
+        },
+        {
+          "type": "Text",
+          "name": "梦境记录",
+          "required": false,
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "name": "跑步",
+      "icon_name": "running",
+      "icon_color": "#33FFBD",
+      "category": {
+        "name": "Exercise"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "Num",
+          "name": "距离",
+          "required": true,
+          "enabled": true,
+          "unit": "公里"
+        },
+        {
+          "type": "Num",
+          "name": "持续时间",
+          "required": true,
+          "enabled": true,
+          "unit": "分钟"
+        },
+        {
+          "type": "Num",
+          "name": "平均配速",
+          "required": false,
+          "enabled": true,
+          "unit": "分钟/公里"
+        },
+        {
+          "type": "SOptions",
+          "name": "运动强度",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "低", "color": "#A2FF33", "sort": 10},
+            {"name": "中", "color": "#FFFF33", "sort": 11},
+            {"name": "高", "color": "#FFBD33", "sort": 12}
+          ]
+        },
+        {
+          "type": "Text",
+          "name": "跑步地点",
+          "required": false,
+          "enabled": true
+        },
+        {
+          "type": "Text",
+          "name": "备注",
+          "required": false,
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "name": "饮水",
+      "icon_name": "water_drop",
+      "icon_color": "#33A2FF",
+      "category": {
+        "name": "Health"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "Num",
+          "name": "饮水量",
+          "required": true,
+          "enabled": true,
+          "unit": "毫升"
+        },
+        {
+          "type": "SOptions",
+          "name": "饮品种类",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "白水", "color": "#33A2FF", "sort": 10},
+            {"name": "茶", "color": "#008000", "sort": 11},
+            {"name": "咖啡", "color": "#A0522D", "sort": 12},
+            {"name": "果汁", "color": "#FFA500", "sort": 13},
+            {"name": "其他", "color": "#808080", "sort": 14}
+          ]
+        },
+        {
+          "type": "Time",
+          "name": "饮用时间",
+          "required": false,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "name": "心情",
+      "icon_name": "mood",
+      "icon_color": "#FFDE33",
+      "category": {
+        "name": "Wellbeing"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "SOptions",
+          "name": "当前心情",
+          "required": true,
+          "enabled": true,
+          "options": [
+            {"name": "开心", "color": "#33FF57", "sort": 10},
+            {"name": "平静", "color": "#33A2FF", "sort": 11},
+            {"name": "焦虑", "color": "#FFBD33", "sort": 12},
+            {"name": "难过", "color": "#3375FF", "sort": 13},
+            {"name": "愤怒", "color": "#FF5733", "sort": 14},
+            {"name": "疲惫", "color": "#BDBDBD", "sort": 15},
+            {"name": "兴奋", "color": "#FF33A2", "sort": 16}
+          ]
+        },
+        {
+          "type": "Text",
+          "name": "心情日记",
+          "required": false,
+          "enabled": true
+        },
+        {
+          "type": "MOptions",
+          "name": "主要原因",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "工作", "color": "#FF8C33", "sort": 10},
+            {"name": "学习", "color": "#33FFBD", "sort": 11},
+            {"name": "人际关系", "color": "#FF33A2", "sort": 12},
+            {"name": "健康", "color": "#FF5733", "sort": 13},
+            {"name": "天气", "color": "#33A2FF", "sort": 14},
+            {"name": "无特别原因", "color": "#BDBDBD", "sort": 15}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "工作任务",
+      "icon_name": "work_task",
+      "icon_color": "#8E44AD",
+      "category": {
+        "name": "Work"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "Text",
+          "name": "任务名称",
+          "required": true,
+          "enabled": true
+        },
+        {
+          "type": "SOptions",
+          "name": "优先级",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "高", "color": "#E74C3C", "sort": 10},
+            {"name": "中", "color": "#F39C12", "sort": 11},
+            {"name": "低", "color": "#3498DB", "sort": 12}
+          ]
+        },
+        {
+          "type": "Date",
+          "name": "截止日期",
+          "required": false,
+          "enabled": true
+        },
+        {
+          "type": "SOptions",
+          "name": "任务状态",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "未开始", "color": "#BDC3C7", "sort": 10},
+            {"name": "进行中", "color": "#F1C40F", "sort": 11},
+            {"name": "已完成", "color": "#2ECC71", "sort": 12},
+            {"name": "已阻塞", "color": "#E74C3C", "sort": 13}
+          ]
+        },
+        {
+          "type": "Num",
+          "name": "花费时间",
+          "required": false,
+          "enabled": false,
+          "unit": "小时"
+        },
+        {
+          "type": "Text",
+          "name": "备注",
+          "required": false,
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "name": "学习",
+      "icon_name": "study",
+      "icon_color": "#27AE60",
+      "category": {
+        "name": "Study"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "Text",
+          "name": "学习内容",
+          "required": true,
+          "enabled": true
+        },
+        {
+          "type": "Num",
+          "name": "学习时长",
+          "required": true,
+          "enabled": true,
+          "unit": "分钟"
+        },
+        {
+          "type": "SOptions",
+          "name": "专注度",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "非常专注", "color": "#2ECC71", "sort": 10},
+            {"name": "比较专注", "color": "#F1C40F", "sort": 11},
+            {"name": "一般", "color": "#E67E22", "sort": 12},
+            {"name": "容易分心", "color": "#E74C3C", "sort": 13}
+          ]
+        },
+        {
+          "type": "Text",
+          "name": "学习笔记",
+          "required": false,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "name": "餐饮",
+      "icon_name": "eating",
+      "icon_color": "#F39C12",
+      "category": {
+        "name": "Daily"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "SOptions",
+          "name": "餐类别",
+          "required": true,
+          "enabled": true,
+          "options": [
+            {"name": "早餐", "color": "#F1C40F", "sort": 10},
+            {"name": "午餐", "color": "#E67E22", "sort": 11},
+            {"name": "晚餐", "color": "#D35400", "sort": 12},
+            {"name": "加餐", "color": "#BDC3C7", "sort": 13}
+          ]
+        },
+        {
+          "type": "Text",
+          "name": "食物内容",
+          "required": true,
+          "enabled": true
+        },
+        {
+          "type": "Num",
+          "name": "卡路里",
+          "required": false,
+          "enabled": false,
+          "unit": "千卡"
+        },
+        {
+          "type": "SOptions",
+          "name": "满意度",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "非常满意", "color": "#2ECC71", "sort": 10},
+            {"name": "满意", "color": "#F1C40F", "sort": 11},
+            {"name": "一般", "color": "#E67E22", "sort": 12},
+            {"name": "不满意", "color": "#E74C3C", "sort": 13}
+          ]
+        },
+        {
+          "type": "Text",
+          "name": "用餐地点",
+          "required": false,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "name": "社交活动",
+      "icon_name": "social_gathering",
+      "icon_color": "#FF33A2",
+      "category": {
+        "name": "Social"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "Text",
+          "name": "活动名称",
+          "required": true,
+          "enabled": true
+        },
+        {
+          "type": "Text",
+          "name": "参与人",
+          "required": false,
+          "enabled": true
+        },
+        {
+          "type": "TimeRange",
+          "name": "活动时间",
+          "required": false,
+          "enabled": true
+        },
+        {
+          "type": "Text",
+          "name": "活动地点",
+          "required": false,
+          "enabled": true
+        },
+        {
+          "type": "SOptions",
+          "name": "愉悦度",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "非常愉悦", "color": "#33FF57", "sort": 10},
+            {"name": "比较愉悦", "color": "#A2FF33", "sort": 11},
+            {"name": "一般", "color": "#FFFF33", "sort": 12},
+            {"name": "不太愉悦", "color": "#FFBD33", "sort": 13}
+          ]
+        },
+        {
+          "type": "Text",
+          "name": "备注",
+          "required": false,
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "name": "药物服用",
+      "icon_name": "medication",
+      "icon_color": "#C0392B",
+      "category": {
+        "name": "Health"
+      },
+      "is_tracked": true,
+      "properties": [
+        {
+          "type": "Text",
+          "name": "药物名称",
+          "required": true,
+          "enabled": true
+        },
+        {
+          "type": "Text",
+          "name": "剂量",
+          "required": true,
+          "enabled": true
+        },
+        {
+          "type": "Time",
+          "name": "服用时间",
+          "required": true,
+          "enabled": true
+        },
+        {
+          "type": "MOptions",
+          "name": "服用原因",
+          "required": false,
+          "enabled": true,
+          "options": [
+            {"name": "常规", "color": "#3498DB", "sort": 10},
+            {"name": "治疗", "color": "#E74C3C", "sort": 11},
+            {"name": "预防", "color": "#2ECC71", "sort": 12},
+            {"name": "缓解症状", "color": "#F39C12", "sort": 13}
+          ]
+        },
+        {
+          "type": "Text",
+          "name": "副作用记录",
           "required": false,
           "enabled": false
         }
