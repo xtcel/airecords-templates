@@ -10,14 +10,14 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "Num",
+          "type": "number",
           "name": "持续时间",
           "required": true,
           "enabled": true,
           "unit": "分钟"
         },
         {
-          "type": "MOptions",
+          "type": "multiSelect",
           "name": "疼痛位置",
           "required": false,
           "enabled": true,
@@ -31,7 +31,7 @@
           ]
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "疼痛程度",
           "required": false,
           "enabled": true,
@@ -43,7 +43,7 @@
           ]
         },
         {
-          "type": "MOptions",
+          "type": "multiSelect",
           "name": "伴随症状",
           "required": false,
           "enabled": true,
@@ -55,13 +55,13 @@
           ]
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "使用药物",
           "required": false,
           "enabled": true
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "备注",
           "required": false,
           "enabled": true
@@ -78,20 +78,20 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "TimeRange",
+          "type": "date",
           "name": "睡眠时间",
           "required": true,
           "enabled": true
         },
         {
-          "type": "Num",
+          "type": "number",
           "name": "睡眠时长",
           "required": false,
           "enabled": true,
           "unit": "小时"
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "睡眠质量",
           "required": false,
           "enabled": true,
@@ -104,7 +104,7 @@
           ]
         },
         {
-          "type": "MOptions",
+          "type": "multiSelect",
           "name": "影响因素",
           "required": false,
           "enabled": true,
@@ -117,13 +117,13 @@
           ]
         },
         {
-          "type": "Boolean",
+          "type": "switcher",
           "name": "做梦",
           "required": false,
           "enabled": true
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "梦境记录",
           "required": false,
           "enabled": false
@@ -140,28 +140,28 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "Num",
+          "type": "number",
           "name": "距离",
           "required": true,
           "enabled": true,
           "unit": "公里"
         },
         {
-          "type": "Num",
+          "type": "number",
           "name": "持续时间",
           "required": true,
           "enabled": true,
           "unit": "分钟"
         },
         {
-          "type": "Num",
+          "type": "number",
           "name": "平均配速",
           "required": false,
           "enabled": true,
           "unit": "分钟/公里"
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "运动强度",
           "required": false,
           "enabled": true,
@@ -172,13 +172,13 @@
           ]
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "跑步地点",
           "required": false,
           "enabled": true
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "备注",
           "required": false,
           "enabled": false
@@ -195,14 +195,14 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "Num",
+          "type": "number",
           "name": "饮水量",
           "required": true,
           "enabled": true,
           "unit": "毫升"
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "饮品种类",
           "required": false,
           "enabled": true,
@@ -215,7 +215,7 @@
           ]
         },
         {
-          "type": "Time",
+          "type": "date",
           "name": "饮用时间",
           "required": false,
           "enabled": true
@@ -232,7 +232,7 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "当前心情",
           "required": true,
           "enabled": true,
@@ -247,13 +247,13 @@
           ]
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "心情日记",
           "required": false,
           "enabled": true
         },
         {
-          "type": "MOptions",
+          "type": "multiSelect",
           "name": "主要原因",
           "required": false,
           "enabled": true,
@@ -278,13 +278,13 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "Text",
+          "type": "text",
           "name": "任务名称",
           "required": true,
           "enabled": true
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "优先级",
           "required": false,
           "enabled": true,
@@ -295,13 +295,13 @@
           ]
         },
         {
-          "type": "Date",
+          "type": "date",
           "name": "截止日期",
           "required": false,
           "enabled": true
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "任务状态",
           "required": false,
           "enabled": true,
@@ -313,14 +313,14 @@
           ]
         },
         {
-          "type": "Num",
+          "type": "number",
           "name": "花费时间",
           "required": false,
           "enabled": false,
           "unit": "小时"
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "备注",
           "required": false,
           "enabled": false
@@ -337,20 +337,20 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "Text",
+          "type": "text",
           "name": "学习内容",
           "required": true,
           "enabled": true
         },
         {
-          "type": "Num",
+          "type": "number",
           "name": "学习时长",
           "required": true,
           "enabled": true,
           "unit": "分钟"
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "专注度",
           "required": false,
           "enabled": true,
@@ -362,7 +362,7 @@
           ]
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "学习笔记",
           "required": false,
           "enabled": true
@@ -379,7 +379,7 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "餐类别",
           "required": true,
           "enabled": true,
@@ -391,20 +391,20 @@
           ]
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "食物内容",
           "required": true,
           "enabled": true
         },
         {
-          "type": "Num",
+          "type": "number",
           "name": "卡路里",
           "required": false,
           "enabled": false,
           "unit": "千卡"
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "满意度",
           "required": false,
           "enabled": true,
@@ -416,7 +416,7 @@
           ]
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "用餐地点",
           "required": false,
           "enabled": true
@@ -433,31 +433,31 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "Text",
+          "type": "text",
           "name": "活动名称",
           "required": true,
           "enabled": true
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "参与人",
           "required": false,
           "enabled": true
         },
         {
-          "type": "TimeRange",
+          "type": "date",
           "name": "活动时间",
           "required": false,
           "enabled": true
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "活动地点",
           "required": false,
           "enabled": true
         },
         {
-          "type": "SOptions",
+          "type": "singleSelect",
           "name": "愉悦度",
           "required": false,
           "enabled": true,
@@ -469,7 +469,7 @@
           ]
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "备注",
           "required": false,
           "enabled": false
@@ -486,25 +486,25 @@
       "is_tracked": true,
       "properties": [
         {
-          "type": "Text",
+          "type": "text",
           "name": "药物名称",
           "required": true,
           "enabled": true
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "剂量",
           "required": true,
           "enabled": true
         },
         {
-          "type": "Time",
+          "type": "date",
           "name": "服用时间",
           "required": true,
           "enabled": true
         },
         {
-          "type": "MOptions",
+          "type": "multiSelect",
           "name": "服用原因",
           "required": false,
           "enabled": true,
@@ -516,7 +516,7 @@
           ]
         },
         {
-          "type": "Text",
+          "type": "text",
           "name": "副作用记录",
           "required": false,
           "enabled": false
